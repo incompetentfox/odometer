@@ -12,8 +12,7 @@ int main(int argc, char **argv)
 		return 0;
 	}
 	
-	char odometer[strtol(argv[1],NULL,10)];									//init key array of length supplied by argv
-		
+	char odometer[strtol(argv[1],NULL,10)];									//init key array of length supplied by argv		
 					 						
 	int arrLength = (sizeof(odometer)/sizeof(odometer[0])-1);					//Dynamically assign length of array.
 	int arrPos = arrLength-1;													//init variable for array index
@@ -30,13 +29,12 @@ int main(int argc, char **argv)
 	printf("%s\n",odometer);
 	
 	
-	if(odometer[arrPos] < 57)													//if value at index is less than 9, increment.
+		if(odometer[arrPos] < 57)													//if value at index is less than 9, increment.
 		{	
-			odometer[arrPos]++;
-					
+		odometer[arrPos]++;			
 		}
 	
-	else
+		else
 		{	
 			while(odometer[arrPos] == 57)							//if value at index is 9...
 			{
